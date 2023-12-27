@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nev_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.nexis.myapplication.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_product"
+            app:destination="@+id/productFragment"
+            >
+
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.nexis.myapplication.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" >
+        <argument
+            android:name="userid"
+            app:argType="string"
+            android:defaultValue="-"
+         />
+        <argument
+            android:name="product"
+            app:argType="integer"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.nexis.myapplication.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.nexis.myapplication.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>
